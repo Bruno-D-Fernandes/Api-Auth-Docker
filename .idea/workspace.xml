@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="aa74e241-9ea2-401e-8ce4-031b0e0a722f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/JwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/JwtFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/config/security/SecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/model/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/edu/authdocker/model/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/database/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/usuarios_docker_database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database/usuarios_docker_database.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

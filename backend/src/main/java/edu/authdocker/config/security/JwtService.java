@@ -34,7 +34,7 @@ public class JwtService {
                     .getSubject();
             return subject;
         }catch (RuntimeException e){
-            return "";
+            return null;
         }
     }
 

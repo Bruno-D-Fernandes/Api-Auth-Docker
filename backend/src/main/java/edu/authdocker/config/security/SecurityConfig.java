@@ -21,7 +21,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests( http -> {
                     http
                             .requestMatchers("/usuarios/login").permitAll()
-                            .requestMatchers("usuarios/cadastro").permitAll()
+                            .requestMatchers("/usuarios/cadastrar").permitAll()
                             .anyRequest().authenticated();
                 })
                 .build();

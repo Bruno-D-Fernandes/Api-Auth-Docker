@@ -14,13 +14,13 @@ public class JwtService {
 
     private final String SECRET = "FIAGDFBI92837298";
 
-    public String generateToken(UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken){
+    public String generateToken(String email){
         Algorithm algorithm = Algorithm.HMAC256(SECRET);
 
         return JWT.create()
                 .withIssuer("back-end")
-                .withSubject(usernamePasswordAuthenticationToken.getName())
-                .withExpiresAt(LocalDateTime.now().plusHours(1).toInstant(ZoneOffset.of("03:00")))
+                .withSubject(email)
+                .withExpiresAt(LocalDateTime.now().plusHours(1).toInstant(ZoneOffset.of("-03:00")))
                 .sign(algorithm);
     }
 
@@ -32,7 +32,6 @@ public class JwtService {
                     .build()
                     .verify(token)
                     .getSubject();
-
             return subject;
         }catch (RuntimeException e){
             return "";

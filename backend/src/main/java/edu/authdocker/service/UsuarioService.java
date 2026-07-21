@@ -8,6 +8,8 @@ import edu.authdocker.repository.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -38,7 +40,10 @@ public class UsuarioService {
     }
 
     public String login(LoginUsuarioDTO loginUsuarioDto){
+        Authentication authentication = new UsernamePasswordAuthenticationToken(loginUsuarioDto.email(), loginUsuarioDto.senha(), null);
 
+        authenticationManager.authenticate(authentication);
+        return jwtService.generateToken(loginUsuarioDto.email());
     }
 
 }

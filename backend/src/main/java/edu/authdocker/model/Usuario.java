@@ -1,5 +1,7 @@
 package edu.authdocker.model;
 
+import edu.authdocker.dto.usuarioDtos.CadastroUsuarioDTO;
+import edu.authdocker.service.UsuarioService;
 import jakarta.persistence.*;
 import lombok.*;
 import org.jspecify.annotations.Nullable;
@@ -48,5 +50,12 @@ public class Usuario implements UserDetails {
     @Override
     public String getUsername() {
         return this.email;
+    }
+
+    public Usuario(CadastroUsuarioDTO cadastroUsuarioDTO) {
+        this.nome = cadastroUsuarioDTO.nome();
+        this.email = cadastroUsuarioDTO.email();
+        this.senha = cadastroUsuarioDTO.senha();
+        this.urlFoto = cadastroUsuarioDTO.urlFoto();
     }
 }

@@ -7,4 +7,4 @@ CREATE TABLE usuario_table(
     email_usuario VARCHAR(100) NOT NULL UNIQUE,
     password_usuario VARCHAR(250) NOT NULL,
     url_profile_picture VARCHAR(300) UNIQUE
-);g
+);

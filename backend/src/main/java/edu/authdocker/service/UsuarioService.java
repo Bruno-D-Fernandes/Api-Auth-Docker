@@ -41,7 +41,7 @@ public class UsuarioService {
     public void cadastro(CadastroUsuarioDTO cadastroUsuarioDto){
 
         // talvez jogar esse tratamento de imagem para um método privado, por enquanto não funcional
-        if(!cadastroUsuarioDto.foto().isEmpty()){
+        if(cadastroUsuarioDto.foto() != null && !cadastroUsuarioDto.foto().isEmpty()){
             MultipartFile multipartFile = cadastroUsuarioDto.foto();
             Path path = Paths.get(imagesSource).getRoot();
 

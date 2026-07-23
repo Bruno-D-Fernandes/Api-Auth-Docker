@@ -1,0 +1,26 @@
+services:
+  db:
+    build: ./database
+    container_name: database_usuarios
+    environment:
+      - MYSQL_ROOT_PASSWORD=RootPassword
+      - MYSQL_USER=Bruno
+      - MYSQL_PASSWORD=BrunoPassword
+      - MYSQL_DATABASE=usuarios_docker
+    ports:
+        - "3306:3306"
+    volumes:
+      - Volume1_MySQl:/var/lib/mysql
+
+  backend:
+    build: ./backend
+    container_name: backend-usuarios
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://database_usuarios:3306/usuarios_docker
+    ports:
+      - "8080:8080"
+
+volumes:
+  Volume1_MySQl:

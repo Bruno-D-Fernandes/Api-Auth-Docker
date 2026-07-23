@@ -22,11 +22,11 @@ public class Usuario implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
     private Long id;
-
-    @Column(name = "nome_usuario", nullable = false, length = 75)
+                                        // UNIQUE DEVE SER TRUE
+    @Column(name = "nome_usuario", nullable = false, length = 75, unique = false)
     private String nome;
-
-    @Column(name = "email_usuario", nullable = false, length = 100, unique = true)
+                                        // UNIQUE DEVE SER TRUE
+    @Column(name = "email_usuario", nullable = false, length = 100, unique = false)
     private String email;
 
     @Column(name = "password_usuario", nullable = false, length = 250)

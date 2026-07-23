@@ -6,6 +6,7 @@ import lombok.*;
 import org.jspecify.annotations.Nullable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Collection;
 import java.util.List;
@@ -53,6 +54,7 @@ public class Usuario implements UserDetails {
         this.nome = cadastroUsuarioDTO.nome();
         this.email = cadastroUsuarioDTO.email();
         this.senha = cadastroUsuarioDTO.senha();
-        this.urlFoto = cadastroUsuarioDTO.urlFoto();
+        // Arrumar isso
+        this.urlFoto = null;
     }
 }

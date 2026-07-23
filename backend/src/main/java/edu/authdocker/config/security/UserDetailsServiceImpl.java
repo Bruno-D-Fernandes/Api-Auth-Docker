@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 @Service
 public record UserDetailsServiceImpl(UsuarioRepository usuarioRepository) implements UserDetailsService {
 
-    // Não precisa de cast, mas por que não?
     @Override
     public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
         return (UserDetails) usuarioRepository.findByEmail(email);
